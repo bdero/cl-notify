@@ -19,7 +19,9 @@ setup(
     author_email='x@bdero.me',
     description='A desktop notification tool for craigslist searches.',
     url='https://github.com/bdero/cl-notify',
-    install_requires=[],
+    install_requires=[
+        "python-craigslist",
+    ],
 
     **params
 )
