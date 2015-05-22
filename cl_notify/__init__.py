@@ -1,4 +1,9 @@
 #!/usr/bin/env python
+"""
+A desktop notification tool for craigslist searches.
+"""
+
+VERSION = '0.0.1'
 
 import os
 import logging

@@ -8,19 +8,20 @@ except ImportError:
     setuptools_available = False
 
 
-params = {}
+params = {
+    'packages': find_packages(),
+    'version': __import__('cl_notify').VERSION
+}
 
 with open('README.md') as readme:
     params.update({'long_description': readme.read()})
 
 with open('test_requirements.txt') as test_requirements:
-    params.update({'tests_require': test_requirements.read_lines()})
+    params.update({'tests_require': test_requirements.readlines()})
 
 
 setup(
     name='cl_notify',
-    version='0.0.1',
-    packages=['cl_notify'],
     author='Brandon DeRosier',
     author_email='x@bdero.me',
     description='A desktop notification tool for craigslist searches.',
